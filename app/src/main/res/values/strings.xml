@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">proyecto_uno</string>
+
+    //string de Mainactivity
+    <string name="botoninicial">HOME</string>
+
+    //string de Mainactivity2
+    <string name="boton_info_producto1">INFORMACIÓN</string>
+    <string name="boton_info_producto2">INFORMACIÓN</string>
+    <string name="boton_info_producto3">INFORMACIÓN</string>
+    <string name="texto_producto1">PRODUCTO 1</string>
+    <string name="texto_producto2">PRODUCTO 2</string>
+    <string name="texto_producto3">PRODUCTO 3</string>
+    <string name="texto_home">HOME</string>
+
+    //string de Mainactivity3
+    <string name="botondeinformación">VOLVER</string>
+
+</resources>
