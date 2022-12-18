@@ -36,6 +36,7 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         botonproducto2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
