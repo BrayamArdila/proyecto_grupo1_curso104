@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "155903391975",
+    "firebase_url": "https://vehicles-clasic-for-sale-default-rtdb.firebaseio.com",
+    "project_id": "vehicles-clasic-for-sale",
+    "storage_bucket": "vehicles-clasic-for-sale.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155903391975:android:82a53c05a2dd0be9d04a42",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_uno"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155903391975-ohei8bi8spkcjefr9ai7i8dvtd0qmns9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJb9_ljWo0Q86N-xa1l2hHVUMypGhTQyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155903391975-ohei8bi8spkcjefr9ai7i8dvtd0qmns9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
