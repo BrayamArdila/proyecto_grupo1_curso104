@@ -6,21 +6,12 @@ public class Producto {
     private String id;
     private String name_product;
     private String description;
-    private String home;
     private String image;
 
-    public Producto(String id, String name_product, String description, String home, String image) {
+    public Producto(String id, String name_product, String description, String image) {
         this.id = id;
         this.name_product = name_product;
         this.description = description;
-        this.home = home;
-        this.image = image;
-    }
-    public Producto(String name_product, String description, String home, String image) {
-        this.id = UUID.randomUUID().toString();
-        this.name_product = name_product;
-        this.description = description;
-        this.home = home;
         this.image = image;
     }
 
@@ -46,14 +37,6 @@ public class Producto {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getHome() {
-        return home;
-    }
-
-    public void setHome(String home) {
-        this.home = home;
     }
 
     public String getImage() {
