@@ -1,5 +1,4 @@
 package com.example.proyecto_uno;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -18,6 +17,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.proyecto_uno.Adaptadores.ProductAdapter;
 import com.example.proyecto_uno.DB.DBFireBase;
 import com.example.proyecto_uno.Entidades.Producto;
 import com.example.proyecto_uno.Services.services;
@@ -33,6 +33,7 @@ public class ProductForm extends AppCompatActivity {
     private Button btnFormProduct;
     private EditText editNameFormProduct, editDescriptionFormProduct, editPriceFormProduct, editIdFormProduct;
     private ImageView imgFormProduct;
+    private ProductAdapter productAdapter;
     ActivityResultLauncher<String> content;
 
     @Override
@@ -91,29 +92,23 @@ public class ProductForm extends AppCompatActivity {
         btnFormProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println(editIdFormProduct);
-                System.out.println(editNameFormProduct);
-                System.out.println(editDescriptionFormProduct);
-
                 try {
-                    Producto product = new Producto(
+                    productAdapter= new ProductAdapter();
+
+                    productAdapter.createOrUpdateProduct(
+
                             UUID.randomUUID().toString(),
                             editNameFormProduct.getText().toString(),
                             editDescriptionFormProduct.getText().toString(),
-                            ""
+                            "",
+                            edit
+
                     );
-
-                    if(edit){
-                        product.setId(intentIN.getStringExtra("id"));
-                        dbFirebase.updateData(product);
-                    }else{
-                        dbFirebase.insertData(product);
-                    }
-
 
                 }catch (Exception e){
                     Log.e("DB Insert", e.toString());
                 }
+
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
                 startActivity(intent);
