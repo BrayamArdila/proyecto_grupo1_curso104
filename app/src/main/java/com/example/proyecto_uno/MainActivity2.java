@@ -1,15 +1,21 @@
 package com.example.proyecto_uno;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.proyecto_uno.Adaptadores.ProductAdapter;
+import com.example.proyecto_uno.Entidades.Producto;
+
+import java.util.ArrayList;
+import java.util.UUID;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -20,6 +26,8 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+
 
         botonproducto1= (Button) findViewById(R.id.botonproducto1);
         botonproducto2= (Button) findViewById(R.id.botonproducto2);
@@ -32,12 +40,25 @@ public class MainActivity2 extends AppCompatActivity {
         botonproducto1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
                 intent.putExtra("Title", textoproducto1.getText().toString());
                 intent.putExtra("descripcion", "El Ford A (1927-1931) es un automóvil que fue producido y distribuido por el fabricante estadounidense Ford.Este modelo fue el segundo gran éxito de la marca tras su predecesor, el Ford T.Llegando a producirse 4 320 446 unidades de este modelo. PRECIO: 458.000.245 PESOS ");
                 intent.putExtra("codigodelaimagen", R.drawable.carro1);
                 startActivity(intent);
+
+//                try {
+//                    ProductAdapter productAdapter= new ProductAdapter();
+//                    ArrayList<Producto> product =  productAdapter.getProducts();
+//                    System.out.println(product);
+//
+//                }catch (Exception e){
+//                    Log.e("DB Insert", e.toString());
+//                }
+
             }
+
         });
 
         botonproducto2.setOnClickListener(new View.OnClickListener() {
